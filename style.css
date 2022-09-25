@@ -369,15 +369,7 @@ background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(0,0,0,1) 100%);
     
 }
 
-.experience-one{
-    transform: translatex(-50%);
-    opacity: 0;
-}
 
-.experience-two{
-    transform: translatex(50%);
-    opacity: 0;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .square {
@@ -419,7 +411,27 @@ background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(0,0,0,1) 100%);
     opacity: 1;
     visibility: visible;
   }
-
+  .btn-submit {
+    transition: 0.3s ease-in-out;
+    border: none;
+  }
+  .btn-submit:hover {
+    animation: rotate 0.5s ease-in-out;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    70% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
 
 
 /* responsive */
@@ -470,6 +482,18 @@ background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(0,0,0,1) 100%);
     }
     .mobile-brand{
         font-weight: bold;
+    }
+    .page{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .section1 .card-title{
+        font-size: 20px;
+        text-align: center;
+    }
+    .section1 .card-text{
+        font-size: 14px;
+        text-align: justify;
     }
     .skill-name{
         font-size: 16px;
