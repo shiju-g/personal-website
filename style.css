@@ -468,14 +468,11 @@ background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(0,0,0,1) 100%);
     }
     .static-txt{
         font-size: 35px;
-        text-align: center;
+       
     }
     .qoute{
         font-size: 20px;
-        text-align: center;
-    }
-    .name{
-        text-align: center;
+        
     }
     .profile-details{
         margin-top: 50px;
