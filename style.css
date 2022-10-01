@@ -182,9 +182,10 @@ background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(0,0,0,1) 100%);
 }
 .section1 .card{
     transition: .5s ease-in-out;
+    cursor: pointer;
 }
 .section1 .card:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .section1 .card-title{
     font-size: 25px;
@@ -225,20 +226,61 @@ background: linear-gradient(90deg, rgba(65,65,65,1) 0%, rgba(0,0,0,1) 100%);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+.section2 .card .card-absolute{
+    position: absolute;
+    top: -22px;
+    right: -32px;
+    width: 20%;
+    height: 20%;
+    background: white;
+    z-index: -1;
+    border-radius:  50% ;
+  
 }
 .section2 .card:hover{
     background-position: right;
+    box-shadow: none;
+}
+.section2 .card:hover  .card-absolute{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-radius: 0px;
+     border: 3px solid black;
+    animation: widthAnimation .3s ease-in;
+}
+@keyframes widthAnimation {
+    0%{
+        width: 20%;
+        height: 20%;
+    }50%{
+        width: 50%;
+        height: 50%;
+    }100%{
+        width: 100%;
+        height: 100%;
+    }
 }
 .section2 .card-text{
     color: white;
 }
+.section2 .card:hover  .card-text{
+    color: black;
+}
+.section2 .card:hover h2{
+    color: black;
+}
+.section2 .card:hover .View{
+    color: black;
+}
 .project-name h2{
     color: white;
     font-weight: bold;
-}
-.section2 .card:hover{
-    transform: scale(.9);
-    box-shadow: none;
 }
 
 .section2 h4{
